@@ -14,7 +14,7 @@ case $selected in
   standby)
     sleep 1 && hyprctl dispatch dpms off;;
   logout)
-    loginctl terminate-session ${XDG_SESSION_ID-};;
+    loginctl kill-user ${USER};;
   lockscreen)
     swaylock;;
 esac
